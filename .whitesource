@@ -5,21 +5,21 @@
     "enableLicenseViolations": "true",
     "projectToken": "",
     "enableIaC": "true",
-    "baseBranches": []
+    "baseBranches": [],
+    "enableSAST": true,
+    "enableSASTRemediation": true
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
-    "displayMode": "diff"
+    "displayMode": "diff",
+    "useMendCheckNames": "true"
   },
   "issueSettings": {
-    "minSeverityLevel": "LOW"
+    "minSeverityLevel": "LOW",
+    "issueType": "DEPENDENCY"
   },
   "remediateSettings": {
     "enableRenovate": true,
-    "extends": ["config:base"]
-  },
-      "remediateSettings": {
-      "transitiveRemediation": true,
-      "extends": ["github>whitesource/merge-confidence:beta"]
+    "extends": ["github>whitesource/merge-confidence:beta"]
     }
 }
